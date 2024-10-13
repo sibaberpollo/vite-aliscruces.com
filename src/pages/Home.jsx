@@ -1,14 +1,12 @@
 // src/App.jsx
 import React, { useState } from 'react';
-import Layout from '../components/Layout';  // Asegúrate de importar el layout
-//import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
   const isInteriorPage = false;  // Puedes cambiar esto dependiendo de la página
 
   return (
-    <Layout isInteriorPage={isInteriorPage}>
+    <>
       <section className="main-banner-hp3">
         <div className="fixed-bg bg5 overlay"></div>
         <div className="container">
@@ -70,7 +68,7 @@ function App() {
             </div>
           </div>
         </section>
-    </Layout>
+    </>
   );
 }
 
