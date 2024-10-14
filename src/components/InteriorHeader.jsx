@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MobileMenu from './MobileMenu'; 
-import Logo from '../assets/images/logo750x750.png'
-import MenuBars from '../assets/images/bars2.png'
+import Logo from '/images/logo750x750.png'
+import MenuBars from '/images/bars2.png'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

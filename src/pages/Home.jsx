@@ -96,28 +96,28 @@ function App() {
             <div className="authors-sec v5">
               <div className="row">
                 <Courses
-                  imgSrc="src/assets/images/resources/author1.jpg"
+                  imgSrc="/images/resources/author1.jpg"
                   name="Nomina James"
                   role="Scientist Artist"
                   profileLink="https://www.patreon.com/NominaJames"
                   playlistLink="#"
                 />
                 <Courses
-                  imgSrc="src/assets/images/resources/author2.jpg"
+                  imgSrc="/images/resources/author2.jpg"
                   name="Thomas James"
                   role="Scientist Artist"
                   profileLink="https://www.patreon.com/ThomasJames"
                   playlistLink="#"
                 />
                 <Courses
-                  imgSrc="src/assets/images/resources/author3.jpg"
+                  imgSrc="/images/resources/author3.jpg"
                   name="Wilimes Doms"
                   role="Scientist Artist"
                   profileLink="https://www.patreon.com/WilimesDoms"
                   playlistLink="#"
                 />
                 <Courses
-                  imgSrc="src/assets/images/resources/author4.jpg"
+                  imgSrc="/images/resources/author4.jpg"
                   name="Qlark Walkar"
                   role="Scientist Artist"
                   profileLink="https://www.patreon.com/QlarkWalkar"

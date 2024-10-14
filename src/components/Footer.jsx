@@ -1,6 +1,6 @@
 // src/components/Footer.jsx
 import React from 'react';
-import logo from '../assets/images/logo.png'; // Ajusta el path según tu estructura de archivos
+import logo from '/images/logo.png'; // Ajusta el path según tu estructura de archivos
 
 export default function Footer() {
   return (

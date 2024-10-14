@@ -1,5 +1,5 @@
 import React from 'react';
-import FeaturedImage from '../assets/images/resources/blog-large.jpg';
+import FeaturedImage from '/images/resources/blog-large.jpg';
 import { Helmet } from 'react-helmet';
 
 function QuienEsAlisCruces() {
