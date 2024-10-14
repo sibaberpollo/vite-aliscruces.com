@@ -1,5 +1,7 @@
 // src/App.jsx
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
+import Courses from '../components/Courses';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -7,6 +9,20 @@ function App() {
 
   return (
     <>
+      <Helmet>
+        <title>Inicio | Alis Cruces - Músico Venezolano</title>
+        <meta
+          name="description"
+          content="Bienvenido al sitio oficial de Alis Cruces, músico y docente venezolano. Conoce su trabajo como cuatrista internacional y su labor como director de la Orquesta Regional Alma Llanera de Carabobo."
+        />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Inicio - Alis Cruces" />
+        <meta
+          property="og:description"
+          content="Explora la trayectoria de Alis Cruces, destacado músico y cuatrista venezolano."
+        />
+        <meta property="og:image" content="/path-to-home-image.jpg" />
+      </Helmet>
       <section className="main-banner-hp3">
         <div className="fixed-bg bg5 overlay"></div>
         <div className="container">
@@ -64,6 +80,49 @@ function App() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section style={{ paddingTop: '60px' }}>
+          <div className="container">
+            <div className="section-title text-center">
+              <span>Enjoy some new awesome music</span>
+              <h2>
+                Featured <span>Courses</span>
+              </h2>
+            </div>
+
+            <div className="authors-sec v5">
+              <div className="row">
+                <Courses
+                  imgSrc="src/assets/images/resources/author1.jpg"
+                  name="Nomina James"
+                  role="Scientist Artist"
+                  profileLink="https://www.patreon.com/NominaJames"
+                  playlistLink="#"
+                />
+                <Courses
+                  imgSrc="src/assets/images/resources/author2.jpg"
+                  name="Thomas James"
+                  role="Scientist Artist"
+                  profileLink="https://www.patreon.com/ThomasJames"
+                  playlistLink="#"
+                />
+                <Courses
+                  imgSrc="src/assets/images/resources/author3.jpg"
+                  name="Wilimes Doms"
+                  role="Scientist Artist"
+                  profileLink="https://www.patreon.com/WilimesDoms"
+                  playlistLink="#"
+                />
+                <Courses
+                  imgSrc="src/assets/images/resources/author4.jpg"
+                  name="Qlark Walkar"
+                  role="Scientist Artist"
+                  profileLink="https://www.patreon.com/QlarkWalkar"
+                  playlistLink="#"
+                />
               </div>
             </div>
           </div>
