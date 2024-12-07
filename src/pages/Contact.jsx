@@ -53,14 +53,15 @@ function Contact() {
               <div className="contact-page-form">
                 <h3 className="sb-title">¿Tienes alguna pregunta?</h3>
                 <form
-                    name="contact"
-                    method="POST"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                    action="/gracias"
-                    className="contact-form"
-                    >
-
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  action="/gracias"
+                  className="contact-form"
+                >
+                  {/* Honeypot para evitar spam */}
+                  <input type="hidden" name="bot-field" />
                   {/* Campo oculto para Netlify */}
                   <input type="hidden" name="form-name" value="contact" />
                   <div className="row">
