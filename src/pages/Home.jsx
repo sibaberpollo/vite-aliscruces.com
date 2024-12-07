@@ -28,7 +28,7 @@ function App() {
         <div className="container">
           <div className="banner-text-hp3">
             <span>Apóyame en Patreon</span>
-            <h2>Explora mis contenidos exclusivo y mis cursos destacados</h2>
+            <h2>Explora mis contenidos exclusivos y mis cursos destacados</h2>
             <a
               href="https://www.patreon.com/aliscruces"
               className="btn-default open-music-player"

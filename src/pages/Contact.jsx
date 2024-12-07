@@ -57,7 +57,7 @@ function Contact() {
                   <li>
                     <i className="flaticon-mail"></i>
                     <span>
-                      <a href="mailto:contacto@aliscruces.com">contacto@aliscruces.com</a>
+                      <a href="mailto:tutorialesaliscruces@gmail.com">tutorialesaliscruces@gmail.com</a>
                     </span>
                   </li>
                   <li>
