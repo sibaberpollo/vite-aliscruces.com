@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 
 function Contact() {
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => setFormSubmitted(true))
+      .catch((error) => {
+        console.error("Error submitting the form:", error);
+        alert("Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.");
+      });
+  };
+
   return (
     <>
       <Helmet>
@@ -51,59 +71,69 @@ function Contact() {
             {/* Formulario */}
             <div className="col-lg-8">
               <div className="contact-page-form">
-                <h3 className="sb-title">¿Tienes alguna pregunta?</h3>
-                <form
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                  action="/gracias"
-                  className="contact-form"
-                >
-                  {/* Honeypot para evitar spam */}
-                  <input type="hidden" name="bot-field" />
-                  {/* Campo oculto para Netlify */}
-                  <input type="hidden" name="form-name" value="contact" />
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <input
-                          type="text"
-                          name="name"
-                          placeholder="Tu Nombre *"
-                          required
-                          className="form-control"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <input
-                          type="email"
-                          name="email"
-                          placeholder="Tu Email *"
-                          required
-                          className="form-control"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="form-group">
-                        <textarea
-                          name="message"
-                          placeholder="Tu Mensaje *"
-                          required
-                          className="form-control"
-                        ></textarea>
-                      </div>
-                    </div>
-                    <div className="col-md-12 text-center">
-                      <button type="submit" className="btn-default">
-                        Enviar Mensaje <span></span>
-                      </button>
-                    </div>
+                {formSubmitted ? (
+                  <div className="alert alert-success text-center">
+                    <h3>¡Gracias por tu mensaje!</h3>
+                    <p>Tu mensaje ha sido enviado correctamente. Me pondré en contacto contigo pronto.</p>
                   </div>
-                </form>
+                ) : (
+                  <>
+                    <h3 className="sb-title">¿Tienes alguna pregunta?</h3>
+                    <form
+                      name="contact"
+                      method="POST"
+                      data-netlify="true"
+                      data-netlify-honeypot="bot-field"
+                      className="contact-form"
+                      onSubmit={handleSubmit}
+                      netlify
+                    >
+                      {/* Honeypot para evitar spam */}
+                      <input type="hidden" name="bot-field" />
+                      {/* Campo oculto para Netlify */}
+                      <input type="hidden" name="form-name" value="contact" />
+                      <div className="row">
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <input
+                              type="text"
+                              name="name"
+                              placeholder="Tu Nombre *"
+                              required
+                              className="form-control"
+                            />
+                          </div>
+                        </div>
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <input
+                              type="email"
+                              name="email"
+                              placeholder="Tu Email *"
+                              required
+                              className="form-control"
+                            />
+                          </div>
+                        </div>
+                        <div className="col-md-12">
+                          <div className="form-group">
+                            <textarea
+                              name="message"
+                              placeholder="Tu Mensaje *"
+                              required
+                              className="form-control"
+                            ></textarea>
+                          </div>
+                        </div>
+                        <div className="col-md-12 text-center">
+                          <button type="submit" className="btn-default">
+                            Enviar Mensaje <span></span>
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </>
+                )}
               </div>
             </div>
           </div>
