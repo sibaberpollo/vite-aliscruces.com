@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import MobileMenu from './MobileMenu'; 
-import Logo from '/images/logo750x750.png'
-import MenuBars from '/images/bars2.png'
+import MobileMenu from './MobileMenu';
+import Logo from '/images/logo750x750.png';
+import MenuBars from '/images/bars2.png';
+import SocialLinks from './SocialLinks';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,6 +29,27 @@ export default function Header() {
     setMenuActive(!menuActive);
   };
 
+  return (
+    <header className="pb">
+      <div className={`bottom-header ${isScrolled ? 'sticky animated slideInDown' : ''}`}>
+        <div className="container">
+          <div className="header-content">
+            <div className="logo">
+              <a href="/" title="Homepage">
+                <img src={Logo} alt="Logo" width={150} height={50} />
+              </a>
+            </div>
+            <a href="#" className="menu-btn" onClick={toggleMenu}>
+              <img src={MenuBars} alt="Menu" width={30} height={30} />
+            </a>
+            <SocialLinks />
+          </div>
+        </div>
+      </div>
+      <MobileMenu menuActive={menuActive} toggleMenu={toggleMenu} />
+    </header>
+  );
+  /*
   return (
     <header className="pb">
       <div className={`bottom-header ${isScrolled ? 'sticky animated slideInDown' : ''}`}>
@@ -87,4 +109,5 @@ export default function Header() {
       <MobileMenu menuActive={menuActive} toggleMenu={toggleMenu} />
     </header>
   );
+  */
 }

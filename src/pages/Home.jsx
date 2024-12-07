@@ -27,10 +27,13 @@ function App() {
         <div className="fixed-bg bg5 overlay"></div>
         <div className="container">
           <div className="banner-text-hp3">
-            <span>Channel Podcasts</span>
-            <h2>All The Latest Videos, Podcasts, Articles and Photography</h2>
-            <a href="#" className="btn-default open-music-player">
-              <i className="fa fa-play"></i>Play episode <span></span>
+            <span>Apóyame en Patreon</span>
+            <h2>Explora mis contenidos exclusivo y mis cursos destacados</h2>
+            <a
+              href="https://www.patreon.com/aliscruces"
+              className="btn-default open-music-player"
+            >
+              <i className="fa-brands fa-patreon"></i> Visitar Patreon <span></span>
             </a>
           </div>
         </div>

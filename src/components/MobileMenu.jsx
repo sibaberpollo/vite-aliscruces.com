@@ -1,6 +1,27 @@
 import React from 'react';
+import SocialLinks from './SocialLinks';
 
 export default function MobileMenu({ menuActive, toggleMenu }) {
+  return (
+    <div className={`responsive-mobile-menu d-flex flex-wrap align-items-end ${menuActive ? 'active' : ''}`}>
+      <button onClick={toggleMenu} className="close-menu">
+        <i className="fa fa-times"></i>
+      </button>
+      <ul className="mb-menu">
+        <li>
+          <a href="/quien-es-alis-cruces">¿Quién soy?</a>
+        </li>
+      </ul>
+      <SocialLinks />
+      <div className="rep-copyright">
+        <p>
+          Copyright © 2024 · All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  );
+
+  /*
   return (
     <div className={`responsive-mobile-menu d-flex flex-wrap align-items-end ${menuActive ? 'active' : ''}`}>
       <button onClick={toggleMenu} className="close-menu">
@@ -51,4 +72,5 @@ export default function MobileMenu({ menuActive, toggleMenu }) {
       </div>
     </div>
   );
+  */
 }

@@ -5215,6 +5215,7 @@ iframe#twitter-widget-0 {
 	margin-top: 10px;
 }
 
-.patreon-section .btn-default { 
-	background: #fa6854;
+.patreon-section .btn-default, .main-banner-hp3 .btn-default {
+	background: var(--orange-color);
 }
+  
