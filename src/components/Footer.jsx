@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="container">
-        <div className="top-footer">
+        {/*<div className="top-footer">
           <div className="row">
             <div className="col-lg-3 col-md-6">
               <div className="widget widget-about">
@@ -45,7 +45,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-        </div>
+        </div>*/}
 
         <div className="bottom-footer">
           <div className="row">
@@ -55,16 +55,15 @@ export default function Footer() {
               </div>
             </div>
             <div className="col-lg-9">
-              <ul className="btm-links">
+              {/*<ul className="btm-links">
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Working for Us</a></li>
                 <li><a href="#">Help</a></li>
                 <li><a href="#">Press</a></li>
                 <li><a href="#">Code of Conduct</a></li>
-              </ul>
+              </ul>*/} 
               <p className="copyright-txt">
-                <strong>BeatX</strong> - Copyright 2020. Website by{' '}
-                <a href="https://themeforest.net/user/softcircles" title="">Softcircles</a>
+                 Copyright 2024.
               </p>
             </div>
           </div>

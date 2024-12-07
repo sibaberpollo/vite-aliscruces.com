@@ -54,7 +54,7 @@ function QuienEsAlisCruces() {
                         Como cuatrista, soy miembro de la agrupación Compasses, con la que he tenido el honor de presentarme en escenarios nacionales e internacionales en países como China, Alemania, Irlanda, España, Luxemburgo, Hong Kong, Australia, Colombia, Macao y Bolivia. En 2020, junto a Compasses, grabamos la producción discográfica "Sotavento", nominada a los Latin Grammy y los Premios Pepsi Music.
                       </p>
                       <h2>Mis Reconocimientos</h2>
-                      <ul>
+                      <ul class="reconocimientos">
                         <li>1er Lugar en el Festival de Nuevos Intérpretes del Cuatro, Caracas 2012</li>
                         <li>1er Lugar como mejor cuatrista en el Festival de Música Llanera “El Silbón” 2010 y 2012</li>
                         <li>1er Lugar en el Festival Turístico Internacional San Martín de los Llanos 2012</li>
