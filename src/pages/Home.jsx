@@ -47,7 +47,7 @@ function App() {
                       <iframe
                         width="560"
                         height="315"
-                        src="https://www.youtube.com/embed/YqCT8UxVs_g"
+                        src="https://www.youtube.com/embed/X1CVanLWQHc"
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -55,28 +55,20 @@ function App() {
                       ></iframe>
                     </div>
                   </div>
-                  <div className="col-lg-7 p-0">
+                  <div
+                    className="col-lg-7 p-0 abt-text-container wrapped-bio"
+                    onClick={() => window.location.href = '/quien-es-alis-cruces'}
+                    style={{ cursor: 'pointer' }}
+                  >
                     <div className="abt-text">
-                      <h5 className="rad-status">
-                        <i className="flaticon-sound-bars"></i>On Radio 81.1 FM
-                      </h5>
                       <h2>¿Quién soy?</h2>
-                      <p>Alis Cruces, es un músico y docente de Güigüe Estado Carabobo, que reside actualmente en Valencia, Venezuela.</p>
-                      <div className="presented">
-                        {/*<h3>Presented By:</h3>
-                        <ul>
-                          <li>
-                            <Link href="#">
-                              Rhian Todhunter
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href="#">
-                              Will Backler + Jackson
-                            </Link>
-                          </li>
-                        </ul>*/}
-                      </div>
+                      <p>
+                        Alis Cruces, es un músico y docente de Güigüe Estado Carabobo, que reside
+                        actualmente en Valencia, Venezuela.
+                      </p>
+                      <a href="/quien-es-alis-cruces" className="btn-default open-music-player">
+                        <i className="fa fa-arrow-right"></i>Leer más <span></span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -84,46 +76,35 @@ function App() {
             </div>
           </div>
         </section>
-        <section style={{ paddingTop: '60px' }}>
+        <section className="patreon-section" style={{ paddingTop: '60px' }}>
           <div className="container">
             <div className="section-title text-center">
-              <span>Enjoy some new awesome music</span>
+              <span>Mi tienda de cursos en Patreon</span>
               <h2>
-                Featured <span>Courses</span>
+                Cursos <span>Destacados</span>
               </h2>
             </div>
-
             <div className="authors-sec v5">
               <div className="row">
-                <Courses
-                  imgSrc="/images/resources/author1.jpg"
-                  name="Nomina James"
-                  role="Scientist Artist"
-                  profileLink="https://www.patreon.com/NominaJames"
-                  playlistLink="#"
-                />
-                <Courses
-                  imgSrc="/images/resources/author2.jpg"
-                  name="Thomas James"
-                  role="Scientist Artist"
-                  profileLink="https://www.patreon.com/ThomasJames"
-                  playlistLink="#"
-                />
-                <Courses
-                  imgSrc="/images/resources/author3.jpg"
-                  name="Wilimes Doms"
-                  role="Scientist Artist"
-                  profileLink="https://www.patreon.com/WilimesDoms"
-                  playlistLink="#"
-                />
-                <Courses
-                  imgSrc="/images/resources/author4.jpg"
-                  name="Qlark Walkar"
-                  role="Scientist Artist"
-                  profileLink="https://www.patreon.com/QlarkWalkar"
-                  playlistLink="#"
-                />
+                {songbooks.map((songbook, index) => (
+                  <Courses
+                    key={index}
+                    imgSrc={`/images/resources/${songbook.thumbnail}`}
+                    name={songbook.title}
+                    role={songbook.instruments}
+                    profileLink={songbook.link}
+                    playlistLink="#"
+                  />
+                ))}
               </div>
+            </div>
+            <div className="text-center" style={{ marginTop: '30px' }}>
+              <a
+                href="https://www.patreon.com/aliscruces/shop"
+                className="btn-default open-music-player"
+              >
+                <i class="fa-brands fa-patreon"></i> Ir a la tienda <span></span>
+              </a>
             </div>
           </div>
         </section>
@@ -132,3 +113,32 @@ function App() {
 }
 
 export default App;
+
+const songbooks = [
+  {
+    title: "Cancionero Vol. 1",
+    instruments: "Bandola Llanera",
+    thumbnail: "mini1.jpg",
+    link: "https://www.patreon.com/checkout/AlisCruces?pvid=290407",
+  },
+  {
+    title: "Cancionero Vol. 1",
+    instruments: "Cuatro venezolano y Mandolina",
+    thumbnail: "mini2.jpg",
+    link: "https://www.patreon.com/checkout/AlisCruces?pvid=288422",
+  },
+  {
+    title: "Cancionero Vol. 2 Navideño",
+    instruments: "Cuatro venezolano y Mandolina",
+    thumbnail: "mini3.jpg",
+    link: "#",
+  },
+  {
+    title: "Cancionero Vol. 3",
+    instruments: "Cuatro venezolano y Mandolina",
+    thumbnail: "mini4.jpg",
+    link: "https://www.patreon.com/checkout/AlisCruces?pvid=290399", 
+  },
+];
+
+
