@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import SidebarContact from '../components/SidebarContact';
 
 function Gracias() {
   return (
@@ -23,30 +24,7 @@ function Gracias() {
         <div className="container">
           <div className="row">
             {/* Sidebar */}
-            <div className="col-lg-4">
-              <div className="get-touch">
-                <h3 className="sb-title">Contáctame</h3>
-                <p>
-                  Estoy disponible para colaboraciones, clases y cualquier consulta que tengas. ¡No dudes en escribirme!
-                </p>
-                <ul className="contact-dtts">
-                  <li>
-                    <i className="flaticon-telephone"></i>
-                    <span>+58 424 437 0005</span>
-                  </li>
-                  <li>
-                    <i className="flaticon-mail"></i>
-                    <span>
-                      <a href="mailto:contacto@aliscruces.com">contacto@aliscruces.com</a>
-                    </span>
-                  </li>
-                  <li>
-                    <i className="flaticon-location"></i>
-                    <span>Valencia, Venezuela</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <SidebarContact />
 
             {/* Mensaje de Agradecimiento */}
             <div className="col-lg-8 d-flex align-items-center justify-content-center">

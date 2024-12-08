@@ -1,36 +1,47 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import emailjs from '@emailjs/browser';
-import SocialLinks from '../components/SocialLinks';
+import { useNavigate } from 'react-router-dom';
+import SidebarContact from '../components/SidebarContact';
 
 function Contact() {
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [formError, setFormError] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+  
     const form = event.target;
-
+  
+    // Enviar el primer correo
     emailjs
       .sendForm(
         'service_ir30hjk', // Service ID
-        'template_98iboiv', // Template ID
+        'template_98iboiv', // Template ID para ti
         form,
         'eltFaZJW0Qdy-zkN0' // Public Key
       )
-      .then(
-        () => {
-          setFormSubmitted(true);
-          setFormError(false);
-        },
-        (error) => {
-          console.error('Error sending the form:', error);
-          setFormError(true);
-        }
-      );
+      .then(() => {
+        // Enviar el correo de confirmación al usuario
+        emailjs
+          .sendForm(
+            'service_ir30hjk', // Service ID
+            'template_zhvvc6p', // Template ID de confirmación
+            form,
+            'eltFaZJW0Qdy-zkN0' // Public Key
+          )
+          .catch((error) => {
+            console.error('Error sending confirmation email:', error);
+          });
+  
+        // Redirigir después de que ambos correos hayan sido procesados
+        navigate('/gracias');
+      })
+      .catch((error) => {
+        console.error('Error sending the form:', error);
+        setFormError(true);
+      });
   };
-
+  
   return (
     <>
       <Helmet>
@@ -52,93 +63,63 @@ function Contact() {
         <div className="container">
           <div className="row">
             {/* Sidebar */}
-            <div className="col-lg-4">
-              <div className="get-touch">
-                <h3 className="sb-title">Contáctame</h3>
-                <p>
-                  Estoy disponible para colaboraciones, clases y cualquier consulta que tengas. ¡No dudes en escribirme!
-                </p>
-                <ul className="contact-dtts">
-                  <li>
-                    <i className="flaticon-telephone"></i>
-                    <span>+58 424 437 0005</span>
-                  </li>
-                  <li>
-                    <i className="flaticon-mail"></i>
-                    <span>
-                      <a href="mailto:tutorialesaliscruces@gmail.com">tutorialesaliscruces@gmail.com</a>
-                    </span>
-                  </li>
-                  <li>
-                    <i className="flaticon-location"></i>
-                    <span>Valencia, Venezuela</span>
-                  </li>
-                </ul>
-                {/* Social Links */}
-                <SocialLinks className="socio-links" />
-              </div>
-            </div>
+            <SidebarContact />
 
             {/* Formulario */}
             <div className="col-lg-8">
               <div className="contact-page-form">
-                {formSubmitted ? (
-                  <div className="alert alert-success text-center">
-                    <h3>¡Gracias por tu mensaje!</h3>
-                    <p>Tu mensaje ha sido enviado correctamente. Me pondré en contacto contigo pronto.</p>
+                <h3 className="sb-title">¿Tienes alguna pregunta?</h3>
+                <form className="contact-form" onSubmit={handleSubmit}>
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          name="from_name" // Corresponde a {{from_name}}
+                          placeholder="Tu Nombre *"
+                          required
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <input
+                          type="email"
+                          name="from_email" // Corresponde a {{from_email}}
+                          placeholder="Tu Email *"
+                          required
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <input
+                          type="tel"
+                          name="phone" // Corresponde a {{phone}}
+                          placeholder="Tu Teléfono (opcional)"
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="form-group">
+                        <textarea
+                          name="message" // Corresponde a {{message}}
+                          placeholder="Tu Mensaje *"
+                          required
+                          className="form-control"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div className="col-md-12 text-center">
+                      <button type="submit" className="btn-default">
+                        Enviar Mensaje <span></span>
+                      </button>
+                    </div>
                   </div>
-                ) : (
-                  <>
-                    <h3 className="sb-title">¿Tienes alguna pregunta?</h3>
-                    <form className="contact-form" onSubmit={handleSubmit}>
-                      <div className="row">
-                        <div className="col-md-6">
-                          <div className="form-group">
-                            <input
-                              type="text"
-                              name="from_name" // Corresponde a la variable {{from_name}} del template
-                              placeholder="Tu Nombre *"
-                              required
-                              className="form-control"
-                            />
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="form-group">
-                            <input
-                              type="email"
-                              name="email" // Para el correo del remitente
-                              placeholder="Tu Email *"
-                              required
-                              className="form-control"
-                            />
-                          </div>
-                        </div>
-                        <div className="col-md-12">
-                          <div className="form-group">
-                            <textarea
-                              name="message" // Corresponde a la variable {{message}} del template
-                              placeholder="Tu Mensaje *"
-                              required
-                              className="form-control"
-                            ></textarea>
-                          </div>
-                        </div>
-                        <div className="col-md-12 text-center">
-                          <button type="submit" className="btn-default">
-                            Enviar Mensaje <span></span>
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                    {formError && (
-                      <div className="alert alert-danger text-center">
-                        <h3>Hubo un error</h3>
-                        <p>Por favor, inténtalo de nuevo más tarde.</p>
-                      </div>
-                    )}
-                  </>
-                )}
+                </form>
               </div>
             </div>
           </div>
