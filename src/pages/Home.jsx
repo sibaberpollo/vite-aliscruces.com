@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Inicio | Alis Cruces - Músico Venezolano</title>
+        <title>Alis Cruces - Músico Venezolano | Inicio</title>
         <meta
           name="description"
           content="Bienvenido al sitio oficial de Alis Cruces, músico y docente venezolano. Conoce su trabajo como cuatrista internacional y su labor como director de la Orquesta Regional Alma Llanera de Carabobo."
