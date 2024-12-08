@@ -10,6 +10,8 @@ export default function MobileMenu({ menuActive, toggleMenu }) {
       <ul className="mb-menu">
         <li>
           <a href="/quien-es-alis-cruces">¿Quién soy?</a>
+        </li>
+        <li>
           <a href="/contacto">Contáctame</a>
         </li>
       </ul>
