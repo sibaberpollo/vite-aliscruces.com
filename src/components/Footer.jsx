@@ -63,7 +63,7 @@ export default function Footer() {
                 <li><a href="#">Code of Conduct</a></li>
               </ul>*/} 
               <p className="copyright-txt">
-                 Copyright 2024.
+                 Copyright 2024
               </p>
             </div>
           </div>
