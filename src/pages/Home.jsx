@@ -106,7 +106,7 @@ function App() {
                 href="https://www.patreon.com/aliscruces/shop"
                 className="btn-default open-music-player"
               >
-                <i class="fa-brands fa-patreon"></i> Ir a la tienda <span></span>
+                <i className="fa-brands fa-patreon"></i> Ir a la tienda <span></span>
               </a>
             </div>
           </div>
