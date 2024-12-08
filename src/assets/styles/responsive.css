@@ -543,3 +543,10 @@
 	.app-btns li:last-child {margin-bottom: 0;}
 }
 
+@media screen and (max-width: 768px) {
+	.bg5 {
+	  background-size: cover !important; /* Mantén la imagen como fondo */
+	  background-position: -200px center !important; /* Desplaza hacia la izquierda y céntrala verticalmente */
+	}
+}
+  
