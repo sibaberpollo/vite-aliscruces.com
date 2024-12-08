@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import SocialLinks from '../components/SocialLinks';
 
 function Contact() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -39,7 +40,7 @@ function Contact() {
         <meta property="og:image" content="/path-to-image.jpg" />
       </Helmet>
 
-      <section className="block">
+      <section className="block contact-page">
         <div className="container">
           <div className="row">
             {/* Sidebar */}
@@ -65,6 +66,8 @@ function Contact() {
                     <span>Valencia, Venezuela</span>
                   </li>
                 </ul>
+                {/* Social Links */}
+                <SocialLinks className="socio-links" />
               </div>
             </div>
 

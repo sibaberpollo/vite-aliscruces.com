@@ -1,23 +1,33 @@
 import React from 'react';
 
-export default function SocialLinks() {
+export default function SocialLinks({ className = "social-links" }) {
+  const links = [
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/aliscruces/",
+      iconClass: "fab fa-instagram",
+    },
+    {
+      name: "YouTube",
+      url: "https://www.youtube.com/@aliscruces",
+      iconClass: "fab fa-youtube",
+    },
+    {
+      name: "Patreon",
+      url: "https://www.patreon.com/AlisCruces",
+      iconClass: "fab fa-patreon",
+    },
+  ];
+
   return (
-    <ul className="social-links">
-      <li>
-        <a href="https://www.instagram.com/aliscruces/" className="instagram">
-          <i className="fab fa-instagram"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/@aliscruces" className="youtube">
-          <i className="fab fa-youtube"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.patreon.com/AlisCruces" className="patreon">
-          <i className="fab fa-patreon"></i>
-        </a>
-      </li>
+    <ul className={className}>
+      {links.map((link, index) => (
+        <li key={index}>
+          <a href={link.url} title={link.name} className={link.name.toLowerCase()}>
+            <i className={link.iconClass}></i>
+          </a>
+        </li>
+      ))}
     </ul>
   );
 }
