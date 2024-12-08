@@ -1,26 +1,34 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import emailjs from '@emailjs/browser';
 import SocialLinks from '../components/SocialLinks';
 
 function Contact() {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formError, setFormError] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     const form = event.target;
-    const formData = new FormData(form);
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => setFormSubmitted(true))
-      .catch((error) => {
-        console.error("Error submitting the form:", error);
-        alert("Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.");
-      });
+    emailjs
+      .sendForm(
+        'service_ir30hjk', // Service ID
+        'template_98iboiv', // Template ID
+        form,
+        'eltFaZJW0Qdy-zkN0' // Public Key
+      )
+      .then(
+        () => {
+          setFormSubmitted(true);
+          setFormError(false);
+        },
+        (error) => {
+          console.error('Error sending the form:', error);
+          setFormError(true);
+        }
+      );
   };
 
   return (
@@ -82,25 +90,13 @@ function Contact() {
                 ) : (
                   <>
                     <h3 className="sb-title">¿Tienes alguna pregunta?</h3>
-                    <form
-                      name="contact"
-                      method="POST"
-                      data-netlify="true"
-                      data-netlify-honeypot="bot-field"
-                      className="contact-form"
-                      onSubmit={handleSubmit}
-                      netlify
-                    >
-                      {/* Honeypot para evitar spam */}
-                      <input type="hidden" name="bot-field" />
-                      {/* Campo oculto para Netlify */}
-                      <input type="hidden" name="form-name" value="contact" />
+                    <form className="contact-form" onSubmit={handleSubmit}>
                       <div className="row">
                         <div className="col-md-6">
                           <div className="form-group">
                             <input
                               type="text"
-                              name="name"
+                              name="from_name" // Corresponde a la variable {{from_name}} del template
                               placeholder="Tu Nombre *"
                               required
                               className="form-control"
@@ -111,7 +107,7 @@ function Contact() {
                           <div className="form-group">
                             <input
                               type="email"
-                              name="email"
+                              name="email" // Para el correo del remitente
                               placeholder="Tu Email *"
                               required
                               className="form-control"
@@ -121,7 +117,7 @@ function Contact() {
                         <div className="col-md-12">
                           <div className="form-group">
                             <textarea
-                              name="message"
+                              name="message" // Corresponde a la variable {{message}} del template
                               placeholder="Tu Mensaje *"
                               required
                               className="form-control"
@@ -135,6 +131,12 @@ function Contact() {
                         </div>
                       </div>
                     </form>
+                    {formError && (
+                      <div className="alert alert-danger text-center">
+                        <h3>Hubo un error</h3>
+                        <p>Por favor, inténtalo de nuevo más tarde.</p>
+                      </div>
+                    )}
                   </>
                 )}
               </div>
