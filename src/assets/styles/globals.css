@@ -5258,7 +5258,7 @@ footer {
 	color: var(--orange-color);
 }
 
-.social-links li a {
+.social-links li a, .interior-header .social-links li a {
     height: 34px;
     line-height: 34px;
     width: 34px;
