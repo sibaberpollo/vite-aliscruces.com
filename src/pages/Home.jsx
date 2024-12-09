@@ -66,12 +66,83 @@ function App() {
                     <div className="abt-text">
                       <h2>¿Quién soy?</h2>
                       <p>
-                        Alis Cruces, es un músico y docente de Güigüe Estado Carabobo, que reside
-                        actualmente en Valencia, Venezuela.
+                        Músico y docente de Güigüe Estado Carabobo, que reside actualmente en Valencia, Venezuela. 
+                        <a href="/quien-es-alis-cruces" className="leer-mas"> <i className="fa fa-arrow-right"></i> Ler más</a>
                       </p>
-                      <a href="/quien-es-alis-cruces" className="btn-default open-music-player">
-                        <i className="fa fa-arrow-right"></i>Leer más <span></span>
-                      </a>
+                      <div class="listen-dv text-center">
+                        <ul>
+                          <li>
+                            <a
+                              href="https://api.whatsapp.com/send?phone=584244370005"
+                              title="WhatsApp"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <i class="fab fa-whatsapp"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://open.spotify.com/intl-es/artist/3D7CI88hHavfZKZgrVqz4Y?si=PueVlVUTT0KPcMdHjzymJg&utm_medium=share&utm_source=linktree&nd=1&dlsi=811d3935618d40c3"
+                              title="Spotify"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <i class="fab fa-spotify"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.instagram.com/aliscruces/"
+                              title="Instagram"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <i class="fab fa-instagram"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.tiktok.com/@aliscruces4"
+                              title="TikTok"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <i class="fab fa-tiktok"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.patreon.com/AlisCruces"
+                              title="Patreon"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <i class="fab fa-patreon"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.facebook.com/profile.php?id=100091828728907"
+                              title="Facebook"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <i class="fab fa-facebook"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.youtube.com/@aliscruces"
+                              title="YouTube"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <i class="fab fa-youtube"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>

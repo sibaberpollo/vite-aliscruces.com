@@ -3,6 +3,11 @@ import React from 'react';
 export default function SocialLinks({ className = "social-links" }) {
   const links = [
     {
+      name: "Whatsapp",
+      url: "https://api.whatsapp.com/send?phone=584244370005",
+      iconClass: "fab fa-whatsapp",
+    },
+    {
       name: "Instagram",
       url: "https://www.instagram.com/aliscruces/",
       iconClass: "fab fa-instagram",

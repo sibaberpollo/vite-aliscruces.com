@@ -36,11 +36,11 @@ export default function Header() {
           <div className="header-content">
             <div className="logo">
               <a href="/" title="Homepage">
-                <img src={Logo} alt="Logo" width={150} height={50} />
+                <img src={Logo} alt="Logo" width={140} height={40} />
               </a>
             </div>
             <a href="#" className="menu-btn" onClick={toggleMenu}>
-              <img src={MenuBars} alt="Menu" width={30} height={30} />
+              <img src={MenuBars} alt="Menu" width={20} height={20} />
             </a>
             <SocialLinks />
           </div>
