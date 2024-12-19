@@ -59,20 +59,25 @@ function App() {
                       ></iframe>
                     </div>
                   </div>
-                  <div
+                  <a
+                    href="/quien-es-alis-cruces"
                     className="col-lg-7 p-0 abt-text-container wrapped-bio"
-                    onClick={() => window.location.href = '/quien-es-alis-cruces'}
-                    style={{ cursor: 'pointer' }}
+                    style={{ textDecoration: "none", color: "inherit" }} // Opcional, para mantener el estilo visual
                   >
                     <div className="abt-text">
                       <h2>¿Quién soy?</h2>
                       <p>
                         Músico y docente de Güigüe Estado Carabobo, que reside actualmente en Valencia, Venezuela. 
-                        <a href="/quien-es-alis-cruces" className="leer-mas"> <i className="fa fa-arrow-right"></i> Leer más</a>
+                        <a
+                          href="/quien-es-alis-cruces"
+                          className="leer-mas"
+                        >
+                          <i className="fa fa-arrow-right"></i> Leer más
+                        </a>
                       </p>
                       <SocialExtended />
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
