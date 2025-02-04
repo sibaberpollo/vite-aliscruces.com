@@ -7,9 +7,9 @@ function QuienEsAlisCruces() {
     <>
       <Helmet>
         <title>Biografía de Alis Cruces | Músico Venezolano</title>
-        <meta
-          name="description"
-          content="Conoce la biografía de Alis Cruces, destacado músico y docente venezolano. Director de la Orquesta Regional Alma Llanera de Carabobo y cuatrista internacional."
+        <meta 
+          name="description" 
+          content="Conoce la trayectoria de Alis Cruces, cuatrista y docente venezolano. Director de la Orquesta Regional Alma Llanera de Carabobo, con reconocimiento internacional en la música tradicional venezolana." 
         />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Biografía de Alis Cruces" />

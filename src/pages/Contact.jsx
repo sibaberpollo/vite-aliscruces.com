@@ -46,9 +46,9 @@ function Contact() {
     <>
       <Helmet>
         <title>Contacto | Alis Cruces</title>
-        <meta
-          name="description"
-          content="Ponte en contacto con Alis Cruces para colaboraciones, clases y más."
+        <meta 
+          name="description" 
+          content="¿Quieres colaborar con Alis Cruces? Contáctalo para clases de música, presentaciones y proyectos. Disponible para eventos y enseñanza personalizada." 
         />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Contacto | Alis Cruces" />
