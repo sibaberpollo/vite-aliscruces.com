@@ -77,6 +77,32 @@
         "1st Place at the International Festival 'La Siembra del Cuatro' 2017"
       ],
       "conclusion": "These achievements represent my dedication and love for Venezuelan music, and I am excited to continue sharing this legacy with you."
-    }
+    },
+    "songbooks": [
+      {
+        "title": "Songbook Vol. 1",
+        "instruments": "Bandola Llanera",
+        "thumbnail": "mini1.jpg",
+        "link": "https://www.patreon.com/checkout/AlisCruces?pvid=290407"
+      },
+      {
+        "title": "Songbook Vol. 1",
+        "instruments": "Venezuelan Cuatro and Mandolin",
+        "thumbnail": "mini2.jpg",
+        "link": "https://www.patreon.com/checkout/AlisCruces?pvid=288422"
+      },
+      {
+        "title": "Songbook Vol. 2 Christmas Edition",
+        "instruments": "Venezuelan Cuatro and Mandolin",
+        "thumbnail": "mini3.jpg",
+        "link": "#"
+      },
+      {
+        "title": "Songbook Vol. 3",
+        "instruments": "Venezuelan Cuatro and Mandolin",
+        "thumbnail": "mini4.jpg",
+        "link": "https://www.patreon.com/checkout/AlisCruces?pvid=290399"
+      }
+    ]
   }
   

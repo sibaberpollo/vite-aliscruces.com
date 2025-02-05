@@ -77,6 +77,32 @@
         "1er Lugar en el Festival Internacional 'La Siembra del Cuatro' 2017"
       ],
       "conclusion": "Estos logros representan mi dedicación y amor por la música venezolana, y estoy emocionado de seguir compartiendo este legado con ustedes."
-    }
-  }
+    },
+    "songbooks": [
+      {
+        "title": "Cancionero Vol. 1",
+        "instruments": "Bandola Llanera",
+        "thumbnail": "mini1.jpg",
+        "link": "https://www.patreon.com/checkout/AlisCruces?pvid=290407"
+      },
+      {
+        "title": "Cancionero Vol. 1",
+        "instruments": "Cuatro venezolano y Mandolina",
+        "thumbnail": "mini2.jpg",
+        "link": "https://www.patreon.com/checkout/AlisCruces?pvid=288422"
+      },
+      {
+        "title": "Cancionero Vol. 2 Navideño",
+        "instruments": "Cuatro venezolano y Mandolina",
+        "thumbnail": "mini3.jpg",
+        "link": "#"
+      },
+      {
+        "title": "Cancionero Vol. 3",
+        "instruments": "Cuatro venezolano y Mandolina",
+        "thumbnail": "mini4.jpg",
+        "link": "https://www.patreon.com/checkout/AlisCruces?pvid=290399"
+      }
+    ]
+}
   

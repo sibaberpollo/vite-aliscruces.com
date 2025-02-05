@@ -1,21 +1,28 @@
 import React from 'react';
+import { useParams } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import Courses from '../components/Courses';
 import SocialExtended from '../components/SocialExtended';
 
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+
 function Home() {
-  const { t } = useTranslation(); // Hook para acceder a las traducciones
+  const { t, i18n } = useTranslation(); // Hook para acceder a las traducciones
+  const { lang } = useParams();
+  const songbooks = t("home.songbooks", { returnObjects: true });
 
   return (
     <>
       <Helmet>
+        <html lang={i18n.language} />
         <title>{t('home.title')}</title>
         <meta name="description" content={t('home.description')} />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content={t('home.title')} />
-        <meta property="og:description" content={t('home.description')} />
-        <meta property="og:image" content="/path-to-home-image.jpg" />
+
+        {/* SEO multi-idioma con hreflang */}
+        <link rel="alternate" href={`${BASE_URL}/es${location.pathname.replace(/^\/(en|es)/, '')}`} hrefLang="es" />
+        <link rel="alternate" href={`${BASE_URL}/en${location.pathname.replace(/^\/(en|es)/, '')}`} hrefLang="en" />
       </Helmet>
       <section className="main-banner-hp3">
         <div className="fixed-bg bg5 overlay"></div>
@@ -49,12 +56,12 @@ function Home() {
                     ></iframe>
                   </div>
                 </div>
-                <a href="/quien-es-alis-cruces" className="col-lg-7 p-0 abt-text-container wrapped-bio" style={{ textDecoration: "none", color: "inherit" }}>
+                <a href={`/${lang}/quien-es-alis-cruces`} className="col-lg-7 p-0 abt-text-container wrapped-bio" style={{ textDecoration: "none", color: "inherit" }}>
                   <div className="abt-text">
                     <h2>{t('home.who_am_i_title')}</h2>
                     <p>
                       {t('home.bio')}
-                      <a href="/quien-es-alis-cruces" className="leer-mas">
+                      <a href={`/${lang}/quien-es-alis-cruces`} className="leer-mas">
                         <i className="fa fa-arrow-right"></i> {t('home.read_more')}
                       </a>
                     </p>
@@ -83,7 +90,7 @@ function Home() {
                   name={songbook.title}
                   role={songbook.instruments}
                   profileLink={songbook.link}
-                  playlistLink="#"
+                  playlistLink={songbook.link}
                 />
               ))}
             </div>
@@ -100,30 +107,3 @@ function Home() {
 }
 
 export default Home;
-
-const songbooks = [
-  {
-    title: "Cancionero Vol. 1",
-    instruments: "Bandola Llanera",
-    thumbnail: "mini1.jpg",
-    link: "https://www.patreon.com/checkout/AlisCruces?pvid=290407",
-  },
-  {
-    title: "Cancionero Vol. 1",
-    instruments: "Cuatro venezolano y Mandolina",
-    thumbnail: "mini2.jpg",
-    link: "https://www.patreon.com/checkout/AlisCruces?pvid=288422",
-  },
-  {
-    title: "Cancionero Vol. 2 Navideño",
-    instruments: "Cuatro venezolano y Mandolina",
-    thumbnail: "mini3.jpg",
-    link: "#",
-  },
-  {
-    title: "Cancionero Vol. 3",
-    instruments: "Cuatro venezolano y Mandolina",
-    thumbnail: "mini4.jpg",
-    link: "https://www.patreon.com/checkout/AlisCruces?pvid=290399", 
-  },
-];
