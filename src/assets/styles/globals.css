@@ -4760,7 +4760,31 @@ iframe#twitter-widget-0 {
 
 /* RESPONSIVE MOBILE MENU */
 
-/* RESPONSIVE MOBILE MENU */
+.language-selector {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 15px;
+  }
+  
+  .language-selector button {
+	background: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	padding: 8px 15px;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+  }
+  
+  .language-selector button:hover,
+  .language-selector button.active {
+	background: #fff;
+	color: #000;
+  }
+  
 
 
 .responsive-mobile-menu {

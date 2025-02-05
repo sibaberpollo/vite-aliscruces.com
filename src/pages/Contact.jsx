@@ -2,16 +2,18 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import emailjs from '@emailjs/browser';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import SidebarContact from '../components/SidebarContact';
 
 function Contact() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  
+
     const form = event.target;
-  
+
     // Enviar el primer correo
     emailjs
       .sendForm(
@@ -32,30 +34,23 @@ function Contact() {
           .catch((error) => {
             console.error('Error sending confirmation email:', error);
           });
-  
+
         // Redirigir después de que ambos correos hayan sido procesados
         navigate('/gracias');
       })
       .catch((error) => {
         console.error('Error sending the form:', error);
-        setFormError(true);
       });
   };
-  
+
   return (
     <>
       <Helmet>
-        <title>Contacto | Alis Cruces</title>
-        <meta 
-          name="description" 
-          content="¿Quieres colaborar con Alis Cruces? Contáctalo para clases de música, presentaciones y proyectos. Disponible para eventos y enseñanza personalizada." 
-        />
+        <title>{t("contact.title")}</title>
+        <meta name="description" content={t("contact.description")} />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Contacto | Alis Cruces" />
-        <meta
-          property="og:description"
-          content="Ponte en contacto con Alis Cruces para colaboraciones, clases y más."
-        />
+        <meta property="og:title" content={t("contact.title")} />
+        <meta property="og:description" content={t("contact.description")} />
         <meta property="og:image" content="/path-to-image.jpg" />
       </Helmet>
 
@@ -68,15 +63,15 @@ function Contact() {
             {/* Formulario */}
             <div className="col-lg-8">
               <div className="contact-page-form">
-                <h3 className="sb-title">¿Tienes alguna pregunta?</h3>
+                <h3 className="sb-title">{t("contact.form_title")}</h3>
                 <form className="contact-form" onSubmit={handleSubmit}>
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-group">
                         <input
                           type="text"
-                          name="from_name" // Corresponde a {{from_name}}
-                          placeholder="Tu Nombre *"
+                          name="from_name"
+                          placeholder={t("contact.name_placeholder")}
                           required
                           className="form-control"
                         />
@@ -86,8 +81,8 @@ function Contact() {
                       <div className="form-group">
                         <input
                           type="email"
-                          name="from_email" // Corresponde a {{from_email}}
-                          placeholder="Tu Email *"
+                          name="from_email"
+                          placeholder={t("contact.email_placeholder")}
                           required
                           className="form-control"
                         />
@@ -97,8 +92,8 @@ function Contact() {
                       <div className="form-group">
                         <input
                           type="tel"
-                          name="phone" // Corresponde a {{phone}}
-                          placeholder="Tu Teléfono (opcional)"
+                          name="phone"
+                          placeholder={t("contact.phone_placeholder")}
                           className="form-control"
                         />
                       </div>
@@ -106,8 +101,8 @@ function Contact() {
                     <div className="col-md-12">
                       <div className="form-group">
                         <textarea
-                          name="message" // Corresponde a {{message}}
-                          placeholder="Tu Mensaje *"
+                          name="message"
+                          placeholder={t("contact.message_placeholder")}
                           required
                           className="form-control"
                         ></textarea>
@@ -115,7 +110,7 @@ function Contact() {
                     </div>
                     <div className="col-md-12 text-center">
                       <button type="submit" className="btn-default">
-                        Enviar Mensaje <span></span>
+                        {t("contact.send_button")} <span></span>
                       </button>
                     </div>
                   </div>

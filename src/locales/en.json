@@ -1,0 +1,82 @@
+{
+    "home": {
+      "title": "Alis Cruces - Venezuelan Musician | Home",
+      "description": "Discover the talent of Alis Cruces, Venezuelan musician and teacher. International cuatro player and director of the Alma Llanera Regional Orchestra of Carabobo. Explore his music, career, and online classes.",
+      "support_me": "Support me on Patreon",
+      "welcome_message": "Explore my exclusive content and featured courses",
+      "visit_patreon": "Visit Patreon",
+      "who_am_i_title": "Who am I?",
+      "bio": "Musician and teacher from Güigüe, Carabobo State, currently residing in Valencia, Venezuela.",
+      "read_more": "Read more",
+      "patreon_store": "My Patreon course store",
+      "featured_courses": "Featured Courses",
+      "visit_store": "Go to the store",
+      "watch_video": "Watch video",
+      "songbooks": [
+        {
+          "title": "Songbook Vol. 1",
+          "instruments": "Bandola Llanera",
+          "thumbnail": "mini1.jpg",
+          "link": "https://www.patreon.com/checkout/AlisCruces?pvid=290407"
+        },
+        {
+          "title": "Songbook Vol. 1",
+          "instruments": "Venezuelan Cuatro and Mandolin",
+          "thumbnail": "mini2.jpg",
+          "link": "https://www.patreon.com/checkout/AlisCruces?pvid=288422"
+        },
+        {
+          "title": "Songbook Vol. 2 (Christmas Edition)",
+          "instruments": "Venezuelan Cuatro and Mandolin",
+          "thumbnail": "mini3.jpg",
+          "link": "#"
+        },
+        {
+          "title": "Songbook Vol. 3",
+          "instruments": "Venezuelan Cuatro and Mandolin",
+          "thumbnail": "mini4.jpg",
+          "link": "https://www.patreon.com/checkout/AlisCruces?pvid=290399"
+        }
+      ]
+    },
+    "menu": {
+        "who_am_i": "Who am I?",
+        "contact_me": "Contact me"
+    },
+    "contact": {
+        "sidebar_title": "Contact Me",
+        "sidebar_description": "I am available for collaborations, classes, and any inquiries you may have. Don't hesitate to reach out!",
+        "phone": "+58 424 437 0005",
+        "email": "tutorialesaliscruces@gmail.com",
+        "location": "Valencia, Venezuela",
+        "title": "Contact | Alis Cruces",
+        "description": "Want to collaborate with Alis Cruces? Contact him for music lessons, performances, and projects. Available for events and personalized teaching.",
+        "form_title": "Do you have any questions?",
+        "name_placeholder": "Your Name *",
+        "email_placeholder": "Your Email *",
+        "phone_placeholder": "Your Phone (optional)",
+        "message_placeholder": "Your Message *",
+        "send_button": "Send Message"
+    },
+    "biography": {
+      "title": "Biography of Alis Cruces | Venezuelan Musician",
+      "description": "Learn about the journey of Alis Cruces, Venezuelan cuatro player and music teacher. Director of the Alma Llanera Regional Orchestra of Carabobo, with international recognition in Venezuelan traditional music.",
+      "section_title": "My Musical Journey",
+      "introduction": "Hello! I am Alis Cruces, a musician and music teacher from Güigüe, Carabobo State. I currently reside in Valencia, Venezuela, where I continue my artistic and educational work.",
+      "early_years": "My passion for music began at the age of 6, when I had the fortune of training with maestros Maximiliano Rebolledo and Orlando Castro. I was part of the Carlota Fuentes Estudiantina in Güigüe and the Luis Ernesto Quintero Estudiantina in Carabobo.",
+      "education": "I graduated with a degree in Music Education from the University of Carabobo and further refined my cuatro soloist studies at the Simón Bolívar Music Conservatory under the guidance of maestro Carlos Capacho.",
+      "current_work": "Currently, I am the musical director of the Alma Llanera Regional Orchestra of Carabobo, part of the National Orchestra System, and I also teach online classes while creating digital content about Venezuelan music, the cuatro, the bandola llanera, and the mandolin.",
+      "international_performances": "As a cuatro player, I am a member of the group Compasses, with which I have had the honor of performing on national and international stages in countries such as China, Germany, Ireland, Spain, Luxembourg, Hong Kong, Australia, Colombia, Macao, and Bolivia. In 2020, along with Compasses, we recorded the album 'Sotavento', which was nominated for the Latin Grammy Awards and the Pepsi Music Awards.",
+      "recognitions_title": "My Achievements",
+      "recognitions": [
+        "1st Place at the Festival of New Cuatro Performers, Caracas 2012",
+        "1st Place as best cuatro player at the 'El Silbón' Llanera Music Festival 2010 and 2012",
+        "1st Place at the San Martín de los Llanos International Tourism Festival 2012",
+        "1st Place as best cuatro player at the International Joropo Tournament, Villavicencio 2013",
+        "2nd Place for best original cuatro solo composition at the International Joropo Tournament, Villavicencio 2017 and 2018",
+        "1st Place at the International Festival 'La Siembra del Cuatro' 2017"
+      ],
+      "conclusion": "These achievements represent my dedication and love for Venezuelan music, and I am excited to continue sharing this legacy with you."
+    }
+  }
+  

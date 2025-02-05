@@ -1,37 +1,80 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useParams, Navigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Home from './pages/Home';
 import QuienEsAlisCruces from './pages/QuienEsAlisCruces';
 import Contact from './pages/Contact';
 import Gracias from './pages/Gracias';
 import Layout from './components/Layout';
+import './i18n';
+
+// Componente para manejar el cambio de idioma desde la URL
+function LanguageWrapper({ children }) {
+  const { i18n } = useTranslation();
+  const { lang } = useParams(); // Obtiene el idioma desde la URL
+
+  useEffect(() => {
+    if (lang && ['es', 'en'].includes(lang)) {
+      i18n.changeLanguage(lang);
+    } else {
+      i18n.changeLanguage('es'); // Si el idioma no es válido, usa español por defecto
+    }
+  }, [lang, i18n]);
+
+  return children;
+}
 
 function App() {
-  useEffect(() => {
-    // Cargar el script de Google Analytics
-    const script = document.createElement('script');
-    script.src = `https://www.googletagmanager.com/gtag/js?id=G-WSJQ1029XJ`;
-    script.async = true;
-    document.head.appendChild(script);
-
-    script.onload = () => {
-      // Configuración inicial de Google Analytics
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-WSJQ1029XJ');
-    };
-  }, []);
-
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Layout isInteriorPage={false}><Home /></Layout>} />
-        <Route path="/quien-es-alis-cruces" element={<Layout isInteriorPage={true}><QuienEsAlisCruces /></Layout>} />
-        <Route path="/contacto" element={<Layout isInteriorPage={true}><Contact /></Layout>} />
-        <Route path="/gracias" element={<Layout isInteriorPage={true}><Gracias /></Layout>} />
+        {/* Redirige la raíz a /es/home */}
+        <Route path="/" element={<Navigate to="/es/home" replace />} />
+        
+        {/* Redirige si solo está el idioma, agregando /home */}
+        <Route path="/:lang" element={<Navigate to="/:lang/home" replace />} />
+
+        {/* Rutas con el idioma en la URL */}
+        <Route
+          path="/:lang/home"
+          element={
+            <LanguageWrapper>
+              <Layout isInteriorPage={false}>
+                <Home />
+              </Layout>
+            </LanguageWrapper>
+          }
+        />
+        <Route
+          path="/:lang/quien-es-alis-cruces"
+          element={
+            <LanguageWrapper>
+              <Layout isInteriorPage={true}>
+                <QuienEsAlisCruces />
+              </Layout>
+            </LanguageWrapper>
+          }
+        />
+        <Route
+          path="/:lang/contacto"
+          element={
+            <LanguageWrapper>
+              <Layout isInteriorPage={true}>
+                <Contact />
+              </Layout>
+            </LanguageWrapper>
+          }
+        />
+        <Route
+          path="/:lang/gracias"
+          element={
+            <LanguageWrapper>
+              <Layout isInteriorPage={true}>
+                <Gracias />
+              </Layout>
+            </LanguageWrapper>
+          }
+        />
       </Routes>
     </Router>
   );

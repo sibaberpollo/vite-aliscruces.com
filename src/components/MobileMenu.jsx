@@ -1,28 +1,58 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import SocialLinks from './SocialLinks';
 
 export default function MobileMenu({ menuActive, toggleMenu }) {
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  const { lang } = useParams(); // Obtiene el idioma desde la URL
+  const location = useLocation(); // Obtiene la ruta actual
+
+  const changeLanguage = (newLang) => {
+    i18n.changeLanguage(newLang);
+    
+    // Extraer la ruta después del idioma actual (ejemplo: "/es/contacto" -> "/contacto")
+    const newPath = location.pathname.replace(`/${lang}`, '');
+    
+    // Redirigir a la misma página pero con el nuevo idioma
+    navigate(`/${newLang}${newPath}`);
+  };
+
   return (
     <div className={`responsive-mobile-menu d-flex flex-wrap align-items-end ${menuActive ? 'active' : ''}`}>
       <button onClick={toggleMenu} className="close-menu">
         <i className="fa fa-times"></i>
       </button>
+
+      {/* Menú de navegación con enlaces dinámicos */}
       <ul className="mb-menu">
         <li>
-          <a href="/quien-es-alis-cruces">¿Quién soy?</a>
+          <a href={`/${lang}/quien-es-alis-cruces`}>{t("menu.who_am_i")}</a>
         </li>
         <li>
-          <a href="/contacto">Contáctame</a>
+          <a href={`/${lang}/contacto`}>{t("menu.contact_me")}</a>
         </li>
       </ul>
+
+      {/* Selector de idiomas */}
+      <div className="language-selector">
+        <button onClick={() => changeLanguage('es')} className={i18n.language === 'es' ? 'active' : ''}>🇪🇸 ES</button>
+        <button onClick={() => changeLanguage('en')} className={i18n.language === 'en' ? 'active' : ''}>🇺🇸 EN</button>
+      </div>
+
+      {/* Redes sociales */}
       <SocialLinks />
+
+      {/* Copyright */}
       <div className="rep-copyright">
-        <p>
-          Copyright © 2024 · All Rights Reserved.
-        </p>
+        <p>Copyright © 2024 · All Rights Reserved.</p>
       </div>
     </div>
   );
+}
+
+
 
   /*
   return (
@@ -76,4 +106,4 @@ export default function MobileMenu({ menuActive, toggleMenu }) {
     </div>
   );
   */
-}
+

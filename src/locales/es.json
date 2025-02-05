@@ -1,0 +1,82 @@
+{
+    "home": {
+      "title": "Alis Cruces - Músico Venezolano | Inicio",
+      "description": "Descubre el talento de Alis Cruces, músico y docente venezolano. Cuatrista internacional y director de la Orquesta Regional Alma Llanera de Carabobo. Explora su música, trayectoria y clases en línea.",
+      "support_me": "Apóyame en Patreon",
+      "welcome_message": "Explora mis contenidos exclusivos y mis cursos destacados",
+      "visit_patreon": "Visitar Patreon",
+      "who_am_i_title": "¿Quién soy?",
+      "bio": "Músico y docente de Güigüe, Estado Carabobo, que reside actualmente en Valencia, Venezuela.",
+      "read_more": "Leer más",
+      "patreon_store": "Mi tienda de cursos en Patreon",
+      "featured_courses": "Cursos Destacados",
+      "visit_store": "Ir a la tienda",
+      "watch_video": "Ver video",
+      "songbooks": [
+        {
+          "title": "Cancionero Vol. 1",
+          "instruments": "Bandola Llanera",
+          "thumbnail": "mini1.jpg",
+          "link": "https://www.patreon.com/checkout/AlisCruces?pvid=290407"
+        },
+        {
+          "title": "Cancionero Vol. 1",
+          "instruments": "Cuatro venezolano y Mandolina",
+          "thumbnail": "mini2.jpg",
+          "link": "https://www.patreon.com/checkout/AlisCruces?pvid=288422"
+        },
+        {
+          "title": "Cancionero Vol. 2 Navideño",
+          "instruments": "Cuatro venezolano y Mandolina",
+          "thumbnail": "mini3.jpg",
+          "link": "#"
+        },
+        {
+          "title": "Cancionero Vol. 3",
+          "instruments": "Cuatro venezolano y Mandolina",
+          "thumbnail": "mini4.jpg",
+          "link": "https://www.patreon.com/checkout/AlisCruces?pvid=290399"
+        }
+      ]
+    },
+    "menu": {
+        "who_am_i": "¿Quién soy?",
+        "contact_me": "Contáctame"
+    },
+    "contact": {
+        "sidebar_title": "Contáctame",
+        "sidebar_description": "Estoy disponible para colaboraciones, clases y cualquier consulta que tengas. ¡No dudes en escribirme!",
+        "phone": "+58 424 437 0005",
+        "email": "tutorialesaliscruces@gmail.com",
+        "location": "Valencia, Venezuela",
+        "title": "Contacto | Alis Cruces",
+        "description": "¿Quieres colaborar con Alis Cruces? Contáctalo para clases de música, presentaciones y proyectos. Disponible para eventos y enseñanza personalizada.",
+        "form_title": "¿Tienes alguna pregunta?",
+        "name_placeholder": "Tu Nombre *",
+        "email_placeholder": "Tu Email *",
+        "phone_placeholder": "Tu Teléfono (opcional)",
+        "message_placeholder": "Tu Mensaje *",
+        "send_button": "Enviar Mensaje"
+    },
+    "biography": {
+      "title": "Biografía de Alis Cruces | Músico Venezolano",
+      "description": "Conoce la trayectoria de Alis Cruces, cuatrista y docente venezolano. Director de la Orquesta Regional Alma Llanera de Carabobo, con reconocimiento internacional en la música tradicional venezolana.",
+      "section_title": "Mi Trayectoria Musical",
+      "introduction": "¡Hola! Soy Alis Cruces, músico y docente venezolano nacido en Güigüe, Estado Carabobo. Actualmente resido en Valencia, Venezuela, donde continúo mi labor artística y educativa.",
+      "early_years": "Mi pasión por la música comenzó a los 6 años, cuando tuve la fortuna de formarme con los maestros Maximiliano Rebolledo y Orlando Castro. Formé parte de la Estudiantina Carlota Fuentes de Güigüe y la Estudiantina Luis Ernesto Quintero de Carabobo.",
+      "education": "Me gradué como Licenciado en Educación mención Música en la Universidad de Carabobo, y perfeccioné mis estudios de Cuatro Solista en el Conservatorio de Música Simón Bolívar bajo la guía del maestro Carlos Capacho.",
+      "current_work": "Actualmente, soy director musical de la Orquesta Regional Alma Llanera de Carabobo, parte del Sistema Nacional de Orquestas, y también imparto clases en línea mientras creo contenido digital sobre música venezolana, el cuatro, la bandola llanera y la mandolina.",
+      "international_performances": "Como cuatrista, soy miembro de la agrupación Compasses, con la que he tenido el honor de presentarme en escenarios nacionales e internacionales en países como China, Alemania, Irlanda, España, Luxemburgo, Hong Kong, Australia, Colombia, Macao y Bolivia. En 2020, junto a Compasses, grabamos la producción discográfica 'Sotavento', nominada a los Latin Grammy y los Premios Pepsi Music.",
+      "recognitions_title": "Mis Reconocimientos",
+      "recognitions": [
+        "1er Lugar en el Festival de Nuevos Intérpretes del Cuatro, Caracas 2012",
+        "1er Lugar como mejor cuatrista en el Festival de Música Llanera 'El Silbón' 2010 y 2012",
+        "1er Lugar en el Festival Turístico Internacional San Martín de los Llanos 2012",
+        "1er Lugar como mejor cuatrista del Torneo Internacional del Joropo Villavicencio 2013",
+        "2do Lugar como mejor obra inédita para cuatro solista en el Torneo Internacional del Joropo Villavicencio 2017 y 2018",
+        "1er Lugar en el Festival Internacional 'La Siembra del Cuatro' 2017"
+      ],
+      "conclusion": "Estos logros representan mi dedicación y amor por la música venezolana, y estoy emocionado de seguir compartiendo este legado con ustedes."
+    }
+  }
+  
