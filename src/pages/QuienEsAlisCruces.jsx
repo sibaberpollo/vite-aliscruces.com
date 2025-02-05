@@ -40,7 +40,7 @@ function QuienEsAlisCruces() {
                   <div className="blog-post v2">
                     <div className="blog-info">
                       <h1 className='mb-5'>{t("biography.section_title")}</h1>
-                      { i18n.language === "es" && (
+                      { i18n.language === "es" ? (
                         <div className="video-responsive">
                           <iframe
                             width="560"
@@ -51,6 +51,16 @@ function QuienEsAlisCruces() {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                           ></iframe>
+                        </div>
+                      ) : (
+                        <div className="blog-thumbnail">
+                          <img
+                            src={FeaturedImage}
+                            alt="Alis Cruces"
+                            className="w-100"
+                            width={1000}
+                            height={600}
+                          />
                         </div>
                       )}
                       <p className='mt-5'>{t("biography.introduction")}</p>
@@ -68,15 +78,17 @@ function QuienEsAlisCruces() {
                       <p>{t("biography.conclusion")}</p>
                     </div>
                   </div>
-                  <div className="blog-thumbnail">
-                      <img
-                        src={FeaturedImage}
-                        alt="Alis Cruces"
-                        className="w-100"
-                        width={1000}
-                        height={600}
-                      />
-                    </div>
+                    { i18n.language === "es" && (
+                      <div className="blog-thumbnail">
+                        <img
+                          src={FeaturedImage}
+                          alt="Alis Cruces"
+                          className="w-100"
+                          width={1000}
+                          height={600}
+                        />
+                      </div>
+                    )}
                 </div>
               </div>
             </div>
