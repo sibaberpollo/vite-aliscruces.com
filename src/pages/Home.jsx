@@ -23,6 +23,21 @@ function Home() {
         {/* SEO multi-idioma con hreflang */}
         <link rel="alternate" href={`${BASE_URL}/es${location.pathname.replace(/^\/(en|es)/, '')}`} hrefLang="es" />
         <link rel="alternate" href={`${BASE_URL}/en${location.pathname.replace(/^\/(en|es)/, '')}`} hrefLang="en" />
+
+        {/* Facebook Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${BASE_URL}/${i18n.language}/home`} />
+        <meta property="og:title" content={t("home.title")} />
+        <meta property="og:description" content={t("home.description")} />
+        <meta property="og:image" content="https://aliscruces.com/images/resources/bio-alis.jpeg" />
+        <meta property="og:image:alt" content="Alis Cruces - Músico Venezolano" />
+
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@aliscruces" />
+        <meta name="twitter:title" content={t("home.title")} />
+        <meta name="twitter:description" content={t("home.description")} />
+        <meta name="twitter:image" content="https://aliscruces.com/images/resources/bio-alis.jpeg" />
       </Helmet>
       <section className="main-banner-hp3">
         <div className="fixed-bg bg5 overlay"></div>

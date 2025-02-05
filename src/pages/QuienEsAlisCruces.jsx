@@ -13,11 +13,22 @@ function QuienEsAlisCruces() {
         <title>{t("biography.title")}</title>
         <meta name="description" content={t("biography.description")} />
         <meta name="robots" content="index, follow" />
+
+        {/* Facebook Open Graph */}
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content={`${BASE_URL}/${i18n.language}/quien-es-alis-cruces`} />
         <meta property="og:title" content={t("biography.title")} />
         <meta property="og:description" content={t("biography.description")} />
-        <meta property="og:image" content="/path-to-image.jpg" />
-      </Helmet>
+        <meta property="og:image" content="https://aliscruces.com/images/resources/bio-alis.jpeg" />
+        <meta property="og:image:alt" content="Alis Cruces - Biografía" />
 
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@aliscruces" />
+        <meta name="twitter:title" content={t("biography.title")} />
+        <meta name="twitter:description" content={t("biography.description")} />
+        <meta name="twitter:image" content="https://aliscruces.com/images/resources/bio-alis.jpeg" />
+      </Helmet>
       <section className="block">
         <div className="container">
           <div className="page-content">

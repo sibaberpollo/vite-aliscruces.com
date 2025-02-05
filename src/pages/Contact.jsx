@@ -49,11 +49,22 @@ function Contact() {
         <title>{t("contact.title")}</title>
         <meta name="description" content={t("contact.description")} />
         <meta name="robots" content="index, follow" />
+
+        {/* Facebook Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${BASE_URL}/${i18n.language}/contacto`} />
         <meta property="og:title" content={t("contact.title")} />
         <meta property="og:description" content={t("contact.description")} />
-        <meta property="og:image" content="/path-to-image.jpg" />
-      </Helmet>
+        <meta property="og:image" content="https://aliscruces.com/images/resources/bio-alis.jpeg" />
+        <meta property="og:image:alt" content="Alis Cruces - Contacto" />
 
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@aliscruces" />
+        <meta name="twitter:title" content={t("contact.title")} />
+        <meta name="twitter:description" content={t("contact.description")} />
+        <meta name="twitter:image" content="https://aliscruces.com/images/resources/bio-alis.jpeg" />
+      </Helmet>
       <section className="block contact-page">
         <div className="container">
           <div className="row">
