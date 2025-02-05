@@ -1,23 +1,24 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useParams, Navigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import Home from './pages/Home';
-import QuienEsAlisCruces from './pages/QuienEsAlisCruces';
-import Contact from './pages/Contact';
-import Gracias from './pages/Gracias';
-import Layout from './components/Layout';
-import './i18n';
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import Home from "./pages/Home";
+import QuienEsAlisCruces from "./pages/QuienEsAlisCruces";
+import Contact from "./pages/Contact";
+import Gracias from "./pages/Gracias";
+import Layout from "./components/Layout";
+import Redirects from "./routes/Redirects"; // ✅ Importamos las redirecciones como array
+import "./i18n";
 
 // Componente para manejar el cambio de idioma desde la URL
 function LanguageWrapper({ children }) {
   const { i18n } = useTranslation();
-  const { lang } = useParams(); // Obtiene el idioma desde la URL
+  const { lang } = useParams();
 
   useEffect(() => {
-    if (lang && ['es', 'en'].includes(lang)) {
+    if (lang && ["es", "en"].includes(lang)) {
       i18n.changeLanguage(lang);
     } else {
-      i18n.changeLanguage('es'); // Si el idioma no es válido, usa español por defecto
+      i18n.changeLanguage("es");
     }
   }, [lang, i18n]);
 
@@ -28,11 +29,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Redirige la raíz a /es/home */}
-        <Route path="/" element={<Navigate to="/es/home" replace />} />
-        
-        {/* Redirige si solo está el idioma, agregando /home */}
-        <Route path="/:lang" element={<Navigate to="/:lang/home" replace />} />
+        {Redirects} {/* ✅ Ahora funciona correctamente */}
 
         {/* Rutas con el idioma en la URL */}
         <Route
