@@ -5,9 +5,11 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SidebarContact from '../components/SidebarContact';
 
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+
 function Contact() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const handleSubmit = (event) => {
     event.preventDefault();

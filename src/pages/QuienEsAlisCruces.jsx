@@ -3,8 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import FeaturedImage from '/images/resources/bio-alis.jpeg';
 
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+
 function QuienEsAlisCruces() {
-  const { t } = useTranslation(); // Hook de traducción
+  const { t, i18n } = useTranslation(); // Hook de traducción
   const recognitions = t("biography.recognitions", { returnObjects: true }); // Obtiene la lista de reconocimientos
 
   return (
