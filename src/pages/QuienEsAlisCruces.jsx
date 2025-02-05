@@ -38,18 +38,22 @@ function QuienEsAlisCruces() {
               <div className="col-lg-8">
                 <div className="blog-single">
                   <div className="blog-post v2">
-                    <div className="blog-thumbnail">
-                      <img
-                        src={FeaturedImage}
-                        alt="Alis Cruces"
-                        className="w-100"
-                        width={1000}
-                        height={600}
-                      />
-                    </div>
                     <div className="blog-info">
-                      <h2>{t("biography.section_title")}</h2>
-                      <p>{t("biography.introduction")}</p>
+                      <h1 className='mb-5'>{t("biography.section_title")}</h1>
+                      { i18n.language === "es" && (
+                        <div className="video-responsive">
+                          <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/X1CVanLWQHc"
+                            title="Biografía de Alis Cruces"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          ></iframe>
+                        </div>
+                      )}
+                      <p className='mt-5'>{t("biography.introduction")}</p>
                       <p>{t("biography.early_years")}</p>
                       <p>{t("biography.education")}</p>
                       <p>{t("biography.current_work")}</p>
@@ -64,6 +68,15 @@ function QuienEsAlisCruces() {
                       <p>{t("biography.conclusion")}</p>
                     </div>
                   </div>
+                  <div className="blog-thumbnail">
+                      <img
+                        src={FeaturedImage}
+                        alt="Alis Cruces"
+                        className="w-100"
+                        width={1000}
+                        height={600}
+                      />
+                    </div>
                 </div>
               </div>
             </div>
