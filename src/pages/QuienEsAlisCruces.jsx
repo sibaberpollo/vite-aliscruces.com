@@ -31,6 +31,7 @@ function QuienEsAlisCruces() {
         <meta name="twitter:description" content={t("biography.description")} />
         <meta name="twitter:image" content="https://aliscruces.com/images/resources/bio-alis.jpeg" />
       </Helmet>
+
       <section className="block">
         <div className="container">
           <div className="page-content">
@@ -40,7 +41,8 @@ function QuienEsAlisCruces() {
                   <div className="blog-post v2">
                     <div className="blog-info">
                       <h1 className='mb-5'>{t("biography.section_title")}</h1>
-                      { i18n.language === "es" ? (
+
+                      {i18n.language === "es" ? (
                         <div className="video-responsive">
                           <iframe
                             width="560"
@@ -63,11 +65,14 @@ function QuienEsAlisCruces() {
                           />
                         </div>
                       )}
+
                       <p className='mt-5'>{t("biography.introduction")}</p>
                       <p>{t("biography.early_years")}</p>
                       <p>{t("biography.education")}</p>
                       <p>{t("biography.current_work")}</p>
-                      <p>{t("biography.international_performances")}</p>
+
+                      {/* Renderizar el texto con un enlace usando dangerouslySetInnerHTML */}
+                      <p dangerouslySetInnerHTML={{ __html: t("biography.international_performances") }}></p>
 
                       <h2>{t("biography.recognitions_title")}</h2>
                       <ul className="reconocimientos">
@@ -78,17 +83,19 @@ function QuienEsAlisCruces() {
                       <p>{t("biography.conclusion")}</p>
                     </div>
                   </div>
-                    { i18n.language === "es" && (
-                      <div className="blog-thumbnail">
-                        <img
-                          src={FeaturedImage}
-                          alt="Alis Cruces"
-                          className="w-100"
-                          width={1000}
-                          height={600}
-                        />
-                      </div>
-                    )}
+
+                  {/* Mostrar la imagen solo si la página está en español y no se mostró el video */}
+                  {i18n.language === "es" && (
+                    <div className="blog-thumbnail">
+                      <img
+                        src={FeaturedImage}
+                        alt="Alis Cruces"
+                        className="w-100"
+                        width={1000}
+                        height={600}
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

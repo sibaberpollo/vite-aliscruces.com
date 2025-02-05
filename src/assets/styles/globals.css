@@ -5283,11 +5283,11 @@ footer {
 	padding-left: 0px;
 }
 
-.about-section .leer-mas {
+.leer-mas {
 	color: var(--green-color);
 }
 
-.about-section .leer-mas:hover {
+.leer-mas:hover {
 	color: var(--orange-color);
 }
 
