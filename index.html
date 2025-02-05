@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alis Cruces - Músico Venezolano | Inicio</title>
+
     <!-- Favicon general -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
@@ -22,6 +23,30 @@
     <!-- Web App Manifest -->
     <link rel="manifest" href="/site.webmanifest" />
 
+    <!-- 📌 Schema.org JSON-LD para Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alis Cruces",
+        "url": "https://aliscruces.com",
+        "image": "https://aliscruces.com/images/resources/bio-alis.jpeg",
+        "sameAs": [
+          "https://api.whatsapp.com/send?phone=584244370005",
+          "https://www.instagram.com/aliscruces/",
+          "https://www.youtube.com/@aliscruces",
+          "https://www.patreon.com/AlisCruces"
+        ],
+        "jobTitle": "Músico y Docente Venezolano",
+        "description": "Alis Cruces es un cuatrista y docente venezolano, director de la Orquesta Regional Alma Llanera de Carabobo. Conoce su música y proyectos.",
+        "knowsAbout": ["Música Venezolana", "Cuatro Venezolano", "Bandola Llanera", "Docencia Musical"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Valencia",
+          "addressCountry": "Venezuela"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

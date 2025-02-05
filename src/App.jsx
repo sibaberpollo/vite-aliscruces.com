@@ -6,8 +6,9 @@ import QuienEsAlisCruces from "./pages/QuienEsAlisCruces";
 import Contact from "./pages/Contact";
 import Gracias from "./pages/Gracias";
 import Layout from "./components/Layout";
-import Redirects from "./routes/Redirects"; // ✅ Importamos las redirecciones como array
+import Redirects from "./routes/Redirects"; 
 import "./i18n";
+import { Helmet } from "react-helmet";
 
 // Componente para manejar el cambio de idioma desde la URL
 function LanguageWrapper({ children }) {
