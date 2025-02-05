@@ -1,4 +1,5 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.aliscruces.com/sitemap.xml
+Sitemap: https://www.aliscruces.com/sitemap.xml}
+Sitemap: https://aliscruces.com/sitemap-en.xml

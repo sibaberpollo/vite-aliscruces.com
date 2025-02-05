@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.aliscruces.com/</loc>
-    <lastmod>2024-12-07</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.aliscruces.com/quien-es-alis-cruces</loc>
-    <lastmod>2024-12-07</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.aliscruces.com/contacto</loc>
-    <lastmod>2024-12-07</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.aliscruces.com/gracias</loc>
-    <lastmod>2024-12-07</lastmod>
-    <priority>0.5</priority>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://aliscruces.com/sitemap-es.xml</loc>
+    <lastmod>2024-02-05</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://aliscruces.com/sitemap-en.xml</loc>
+    <lastmod>2024-02-05</lastmod>
+  </sitemap>
+</sitemapindex>

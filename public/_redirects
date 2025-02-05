@@ -1,1 +1,17 @@
 /* /index.html 200
+
+# Redirigir la raíz a /es/home
+/ /es/home 301!
+
+# Redirigir páginas antiguas sin idioma a la versión en español
+/contacto /es/contacto 301!
+/quien-es-alis-cruces /es/quien-es-alis-cruces 301!
+/gracias /es/gracias 301!
+
+# Redirigir cualquier URL sin idioma a la versión en español
+/contacto* /es/contacto 301!
+/quien-es-alis-cruces* /es/quien-es-alis-cruces 301!
+/gracias* /es/gracias 301!
+
+# Fallback: Redirigir cualquier ruta desconocida a /es/home
+/* /es/home 301!
