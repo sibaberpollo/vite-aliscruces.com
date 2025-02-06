@@ -91,6 +91,23 @@ function QuienEsAlisCruces() {
                         ))}
                       </ul>
                       <p>{t("biography.conclusion")}</p>
+                      <p>
+                      { i18n.language === "es" ? (
+                          <>
+                            {t("Para más información, visita ")}
+                            <a className="leer-mas" href="https://es.wikipedia.org/wiki/Alis_Cruces" target="_blank" rel="noopener noreferrer">
+                              <i className="fa fa-arrow-right"></i> {t("mi página en Wikipedia")}
+                            </a>.
+                          </>
+                        ) : (
+                          <>
+                            {t("For more information, visit ")}
+                            <a className="leer-mas" href="https://en.wikipedia.org/wiki/Alis_Cruces" target="_blank" rel="noopener noreferrer">
+                              <i className="fa fa-arrow-right"></i> {t("my Wikipedia page")}
+                            </a>.
+                          </>
+                        )}
+                      </p>
                       <h2>{t("biography.compasses_section_title")}</h2>
                       <p>{t("biography.compasses_description")}</p>
                       <div className="video-responsive">
