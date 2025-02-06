@@ -1,7 +1,7 @@
 {
     "home": {
       "title": "Alis Cruces - Músico Venezolano | Inicio",
-      "description": "Descubre el talento de Alis Cruces, músico y docente venezolano. Cuatrista internacional y director de la Orquesta Regional Alma Llanera de Carabobo. Explora su música, trayectoria y clases en línea.",
+      "description": "Alis Cruces, cuatrista venezolano y docente. Director de la Orquesta Alma Llanera de Carabobo y miembro de Compasses, agrupación que fusiona tradición y vanguardia musical.",
       "support_me": "Apóyame en Patreon",
       "welcome_message": "Explora mis contenidos exclusivos y mis cursos destacados",
       "visit_patreon": "Visitar Patreon",
@@ -76,7 +76,10 @@
         "2do Lugar como mejor obra inédita para cuatro solista en el Torneo Internacional del Joropo Villavicencio 2017 y 2018",
         "1er Lugar en el Festival Internacional 'La Siembra del Cuatro' 2017"
       ],
-      "conclusion": "Estos logros representan mi dedicación y amor por la música venezolana, y estoy emocionado de seguir compartiendo este legado con ustedes."
+      "conclusion": "Estos logros representan mi dedicación y amor por la música venezolana, y estoy emocionado de seguir compartiendo este legado con ustedes.",
+      "compasses_section_title": "Compasses: Fusionando tradición y vanguardia",
+      "compasses_description": "Compasses es una agrupación venezolana nacida en 2008, que se viralizó en 2009 gracias a un video donde fueron apodados el 'Dream Theater Venezolano', con elogios del tecladista Jordan Rudess. Han llevado su música a Damasco, Beirut, China, Australia, Luxemburgo, España, Alemania y otros países. En 2020, lanzaron el álbum 'Sotavento', producido por el ganador de dos Latin Grammy Jean Sánchez bajo el sello EBD Records.",
+      "compasses_rrss": "Conéctate con Compasses en Redes Sociales y Plataformas Musicales"
     },
     "songbooks": [
       {

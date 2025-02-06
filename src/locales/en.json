@@ -1,7 +1,7 @@
 {
     "home": {
       "title": "Alis Cruces - Venezuelan Musician | Home",
-      "description": "Discover the talent of Alis Cruces, Venezuelan musician and teacher. International cuatro player and director of the Alma Llanera Regional Orchestra of Carabobo. Explore his music, career, and online classes.",
+      "description": "Alis Cruces, Venezuelan cuatro player and educator. Director of Alma Llanera Orchestra in Carabobo and member of Compasses, a group blending tradition and musical innovation.",
       "support_me": "Support me on Patreon",
       "welcome_message": "Explore my exclusive content and featured courses",
       "visit_patreon": "Visit Patreon",
@@ -76,7 +76,10 @@
         "2nd Place for best original cuatro solo composition at the International Joropo Tournament, Villavicencio 2017 and 2018",
         "1st Place at the International Festival 'La Siembra del Cuatro' 2017"
       ],
-      "conclusion": "These achievements represent my dedication and love for Venezuelan music, and I am excited to continue sharing this legacy with you."
+      "conclusion": "These achievements represent my dedication and love for Venezuelan music, and I am excited to continue sharing this legacy with you.",
+      "compasses_section_title": "Compasses: Blending Tradition and Innovation",
+      "compasses_description": "Compasses is a Venezuelan group founded in 2008 that went viral in 2009 thanks to a video that earned them the nickname 'The Venezuelan Dream Theater,' with praise from keyboardist Jordan Rudess. They have performed in Damascus, Beirut, China, Australia, Luxembourg, Spain, Germany, and other countries. In 2020, they released the album 'Sotavento,' produced by two-time Latin Grammy winner Jean Sánchez under the EBD Records label.",
+      "compasses_rrss": "Connect with Compasses on Social Media and Music Platforms"
     },
     "songbooks": [
       {

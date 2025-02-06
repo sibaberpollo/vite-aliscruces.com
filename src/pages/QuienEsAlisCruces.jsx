@@ -73,7 +73,17 @@ function QuienEsAlisCruces() {
 
                       {/* Renderizar el texto con un enlace usando dangerouslySetInnerHTML */}
                       <p dangerouslySetInnerHTML={{ __html: t("biography.international_performances") }}></p>
-
+                      {i18n.language === "es" && (
+                        <div className="blog-thumbnail">
+                          <img
+                            src={FeaturedImage}
+                            alt="Alis Cruces"
+                            className="w-100"
+                            width={1000}
+                            height={600}
+                          />
+                        </div>
+                      )}
                       <h2>{t("biography.recognitions_title")}</h2>
                       <ul className="reconocimientos">
                         {recognitions.map((item, index) => (
@@ -81,21 +91,38 @@ function QuienEsAlisCruces() {
                         ))}
                       </ul>
                       <p>{t("biography.conclusion")}</p>
+                      <h2>{t("biography.compasses_section_title")}</h2>
+                      <p>{t("biography.compasses_description")}</p>
+                      <div className="video-responsive">
+                          <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/Zsn6YUKaJHQ"
+                            title="Biografía de Alis Cruces"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          ></iframe>
+                      </div>
+                      <div className="listen-dv text-center">
+                        <h3 className="m-4">{t("biography.compasses_rrss")}</h3>
+                        <ul>
+                          {compassesSocialLinks.map((link, index) => (
+                            <li key={index}>
+                              <a
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social-icon-link mx-2"
+                              >
+                                <i className={link.iconClass} aria-hidden="true"></i>
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </div>
-
-                  {/* Mostrar la imagen solo si la página está en español y no se mostró el video */}
-                  {i18n.language === "es" && (
-                    <div className="blog-thumbnail">
-                      <img
-                        src={FeaturedImage}
-                        alt="Alis Cruces"
-                        className="w-100"
-                        width={1000}
-                        height={600}
-                      />
-                    </div>
-                  )}
                 </div>
               </div>
             </div>
@@ -107,3 +134,42 @@ function QuienEsAlisCruces() {
 }
 
 export default QuienEsAlisCruces;
+
+
+const compassesSocialLinks = [
+  {
+    href: "https://www.facebook.com/Compassesvzla/",
+    title: "Compasses Facebook",
+    iconClass: "fab fa-facebook",
+  },
+  {
+    href: "https://www.instagram.com/therealcompasses/",
+    title: "Compasses Instagram",
+    iconClass: "fab fa-instagram",
+  },
+  {
+    href: "https://www.youtube.com/@compassesvzla5719",
+    title: "Compasses YouTube",
+    iconClass: "fab fa-youtube",
+  },
+  {
+    href: "https://open.spotify.com/intl-es/artist/4PFZy8OUhQB8UO8hGPuOgs?autoplay=true",
+    title: "Compasses Spotify",
+    iconClass: "fab fa-spotify",
+  },
+  {
+    href: "https://music.youtube.com/channel/UCwoZyWoqSy5P3Z6s99woLqA",
+    title: "Compasses YouTube Music",
+    iconClass: "fab fa-youtube",
+  },
+  {
+    href: "https://music.apple.com/cl/artist/compasses/876295528",
+    title: "Compasses Apple Music",
+    iconClass: "fa-brands fa-apple",
+  },
+  {
+    href: "https://www.deezer.com/en/artist/7961260",
+    title: "Compasses Deezer",
+    iconClass: "fab fa-deezer",
+  }
+];
