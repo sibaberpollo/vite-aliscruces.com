@@ -78,8 +78,31 @@
       ],
       "conclusion": "These achievements represent my dedication and love for Venezuelan music, and I am excited to continue sharing this legacy with you.",
       "compasses_section_title": "Compasses: Blending Tradition and Innovation",
-      "compasses_description": "Compasses is a Venezuelan group founded in 2008 that went viral in 2009 thanks to a video that earned them the nickname 'The Venezuelan Dream Theater,' with praise from keyboardist Jordan Rudess. They have performed in Damascus, Beirut, China, Australia, Luxembourg, Spain, Germany, and other countries. In 2020, they released the album 'Sotavento,' produced by two-time Latin Grammy winner Jean Sánchez under the EBD Records label.",
-      "compasses_rrss": "Connect with Compasses on Social Media and Music Platforms"
+      "compasses_description": "Compasses is a Venezuelan music group founded in 2008, which went viral in 2009 thanks to a video where they were dubbed the 'Venezuelan Dream Theater,' receiving praise from keyboardist Jordan Rudess. They have performed live in Damascus, Beirut, China, Australia, Luxembourg, Spain, Germany, and other countries. In 2020, they released the album 'Sotavento,' produced by two-time Latin Grammy winner Jean Sánchez under the EBD Records label. Currently, Compasses continues to innovate and create new music, expanding their sound and exploring new frontiers in the fusion of traditional and contemporary music.",
+      "compasses_rrss": "Connect with Compasses on Social Media and Music Platforms",
+      "compasses_members_title": "Members",
+      "compasses_members": [
+        {
+          "instrument": "Harp",
+          "name": "Eduard Jiménez",
+          "instagram": "@arpaeduard"
+        },
+        {
+          "instrument": "Cuatro",
+          "name": "Alis Cruces",
+          "instagram": "@aliscruces"
+        },
+        {
+          "instrument": "Electric Bass",
+          "name": "Nelson Echandía",
+          "instagram": "@nelsonechandiaoficial"
+        },
+        {
+          "instrument": "Maracas",
+          "name": "Andrés Ortiz",
+          "instagram": "@andres.ortiz88"
+        }
+      ]      
     },
     "songbooks": [
       {

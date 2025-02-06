@@ -121,6 +121,27 @@ function QuienEsAlisCruces() {
                           ))}
                         </ul>
                       </div>
+                      <div className="compasses-members">
+                        <hr />
+                        <h4 className="mb-4 fw-bold fs-4">{t("biography.compasses_members_title")}</h4>
+                        <ul className="list-unstyled"> {/* Eliminado d-flex y flex-wrap */}
+                          {t("biography.compasses_members", { returnObjects: true }).map((member, index) => (
+                            <li key={index} className="mb-3">
+                              <p className="fw-bold mb-1">{member.instrument}</p>
+                              <p className="mb-1">{member.name}</p>
+                              <a
+                                href={`https://www.instagram.com/${member.instagram.replace("@", "")}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social-icon-link"
+                              >
+                                <i className="fab fa-instagram"></i> {member.instagram}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -134,7 +155,6 @@ function QuienEsAlisCruces() {
 }
 
 export default QuienEsAlisCruces;
-
 
 const compassesSocialLinks = [
   {
@@ -153,23 +173,19 @@ const compassesSocialLinks = [
     iconClass: "fab fa-youtube",
   },
   {
-    href: "https://open.spotify.com/intl-es/artist/4PFZy8OUhQB8UO8hGPuOgs?autoplay=true",
+    href: "https://open.spotify.com/artist/65eae5XHpxA69xhTtiyMc8?si=CsgjbMYSQJGJtt4Ng9R2pQ",
     title: "Compasses Spotify",
     iconClass: "fab fa-spotify",
   },
   {
-    href: "https://music.youtube.com/channel/UCwoZyWoqSy5P3Z6s99woLqA",
-    title: "Compasses YouTube Music",
-    iconClass: "fab fa-youtube",
-  },
-  {
-    href: "https://music.apple.com/cl/artist/compasses/876295528",
+    href: "https://music.apple.com/cl/artist/compasses-group/1776050276",
     title: "Compasses Apple Music",
     iconClass: "fa-brands fa-apple",
   },
   {
-    href: "https://www.deezer.com/en/artist/7961260",
+    href: "https://deezer.page.link/C3J69VBbTHdHNmXw5",
     title: "Compasses Deezer",
     iconClass: "fab fa-deezer",
   }
 ];
+
