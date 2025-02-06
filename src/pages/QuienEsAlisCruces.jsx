@@ -104,7 +104,7 @@ function QuienEsAlisCruces() {
                             allowFullScreen
                           ></iframe>
                       </div>
-                      <div className="listen-dv text-center">
+                      <div className="compasess-rss listen-dv text-center">
                         <h3 className="m-4">{t("biography.compasses_rrss")}</h3>
                         <ul>
                           {compassesSocialLinks.map((link, index) => (
