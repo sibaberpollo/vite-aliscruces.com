@@ -37,7 +37,7 @@ export default function MobileMenu({ menuActive, toggleMenu }) {
 
       {/* Selector de idiomas */}
       <div className="language-selector">
-        <button onClick={() => changeLanguage('es')} className={i18n.language === 'es' ? 'active' : ''}>🇪🇸 ES</button>
+        <button onClick={() => changeLanguage('es')} className={i18n.language === 'es' ? 'active' : ''}>🇻🇪 ES</button>
         <button onClick={() => changeLanguage('en')} className={i18n.language === 'en' ? 'active' : ''}>🇺🇸 EN</button>
       </div>
 
