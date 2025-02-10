@@ -44,7 +44,7 @@ function Home() {
         <div className="container">
           <div className="banner-text-hp3">
             <span>{t('home.support_me')}</span>
-            <h2>{t('home.welcome_message')}</h2>
+            <h1 class="home-title">{t('home.welcome_message')}</h1>
             <a href="https://www.patreon.com/aliscruces" className="btn-default open-music-player">
               <i className="fa-brands fa-patreon"></i> {t('home.visit_patreon')} <span></span>
             </a>
@@ -71,22 +71,26 @@ function Home() {
                     ></iframe>
                   </div>
                 </div>
-                <a href={`/${lang}/quien-es-alis-cruces`} className="col-lg-7 p-0 abt-text-container wrapped-bio" style={{ textDecoration: "none", color: "inherit" }}>
+                <div className="col-lg-7 p-0 abt-text-container wrapped-bio" style={{ textDecoration: "none", color: "inherit" }}>
                   <div className="abt-text">
                     <h2>{t('home.who_am_i_title')}</h2>
                     <p>
                       {t('home.bio')}
+                      <br />
+                      <br />
                       <a href={`/${lang}/quien-es-alis-cruces`} className="leer-mas">
                         <i className="fa fa-arrow-right"></i> {t('home.read_more')}
                       </a>
                     </p>
-                    <SocialExtended />
                   </div>
-                </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+      <section>
+        <SocialExtended />
       </section>
       <section className="patreon-section" style={{ paddingTop: '60px' }}>
         <div className="container">

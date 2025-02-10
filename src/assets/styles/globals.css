@@ -78,7 +78,16 @@ h1 {
 	color: #333; /* Color principal */
 	text-align: center; /* Opcional, si quieres centrarlo */
 	margin-bottom: 20px;
-  }
+}
+
+h1.home-title {
+	color: #ffffff;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 42px;
+	text-align: left;
+}
   
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
