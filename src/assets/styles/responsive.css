@@ -163,7 +163,7 @@
 	.beatx-playyer .jp-gui.jp-interface {padding: 15px 45px 10px;}
 	.block.list-sec {padding-top: 180px;}
 	.banner-text-hp3 > h2 {font-size: 42px;line-height: 48px;}
-	.main-banner-hp3 {text-align: center;}
+	.main-banner-hp3 {text-align: left;}
 	.main-banner-hp3 .banner-text-hp3 {max-width: 100%;}
 	.jp-controls.d-flex.flex-wrap.align-items-center.justify-content-center {justify-content: center !important;}
 	.beatx-playyer.fixed-player .jp-audio .jp-controls {justify-content: center !important;}
