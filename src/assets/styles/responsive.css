@@ -273,7 +273,7 @@
 	.main-banner-hp4.v5 {padding: 75px 0px 250px;}
 	.main-banner-hp4.v6 .banner-text-hp3 > h2 {font-size: 32px;line-height: 40px;}
 	.main-banner-hp4.v6 {padding: 75px 0 230px;}
-	.main-banner-hp4.v5.v7 .banner-text-hp3 > h2 {font-size: 36px;line-height: 46px;}
+	.main-banner-hp4.v5.v7 .banner-text-hp3 > h2, .banner-text-hp3 > h1 {font-size: 36px;line-height: 46px;}
 	.jp-controls.d-flex.flex-wrap.align-items-center.justify-content-start {justify-content: center !important;}
 	.musicc-controls .beatx-playyer .jp-title {font-size: 24px;margin-bottom: 10px;}
 	.authors-sec.author-page {margin-top: 55px;}

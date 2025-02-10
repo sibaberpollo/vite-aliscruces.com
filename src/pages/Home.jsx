@@ -44,7 +44,7 @@ function Home() {
         <div className="container">
           <div className="banner-text-hp3">
             <span>{t('home.support_me')}</span>
-            <h1 class="home-title">{t('home.welcome_message')}</h1>
+            <h1>{t('home.welcome_message')}</h1>
             <a href="https://www.patreon.com/aliscruces" className="btn-default open-music-player">
               <i className="fa-brands fa-patreon"></i> {t('home.visit_patreon')} <span></span>
             </a>
